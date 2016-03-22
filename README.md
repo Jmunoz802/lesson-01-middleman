@@ -1,33 +1,107 @@
-# Initial commands for setting up a project:
+# Getting started with this project
 
-Commands to run after a new project has been initializes:
+Getting this project started is easy. Simply
 
-    - bower install                 # generates bower_components for foundation
-    - git init                      # creates an empty repository
-    - git add .                     # adds all files in current directory to git
-    - git commit -m "<message>"     # commits added files with a message, ex. git commit -m "initial commit" , the typical first commit
-    - heroku create <name>          # creates a heroku application with name as the subdomain, ex. heroku create test produces test.herokuapp.com
-    - git push heroku master        # pushes current master branch to remote repository on heroku, stages the project
+    - Install and use ruby version 2.1.3 "rvm install 2.1.3 && rvm use 2.1.3"
 
-Optional commands for projects:
+    - Create a gemset "rvm gemset create middleman"
 
-    - bundle install                # installs gems in gemfile
-    - bundle update                 # updates gems to latest compatible versions, regenerates gemfile.lock
-    - bower update                  # updates bower_components to latest versions available for the foundation gem
+    - Install bundler "gem install bundler"
+
+    - Install all other gems "bundle install"
+
+    - Start the middleman server "middleman server"
+
+    - Visit web page at "http://localhost:4567/"
+
+# Using Javascript ES6
+
+To use ES6, you need to specify that the javascript file is an ES6 file by including .es6 as the extension
+
+```
+/assets/javascripts/application.js.es6
+```
+
+# Page-specific scripts and initialization contexts
+
+For the best example of where you should put context-specific initialization code, please reference /assets/javascripts/pages/home.js.es6
+
+```
+//= require animations/header
+
+$(document).ready(() => {
+  // Proto a blank array
+  let animations = [];
+
+  // Basic accessor function to check if we should run logic for this page
+  let isRelevent = () => {
+    return $(".home-page-container").length > 0;
+  };
+
+  // Build animation array
+  let initAnimations = () => {
+    // Construct all animations
+    animations = [
+      new HeaderAnimation()
+    ];
+
+    // Start all animations
+    animations.forEach(anim => { anim.start(); });
+  }
+
+
+  if (isRelevent()) {
+    // Start off by constructing and playing animations
+    initAnimations();
+
+    // When the window resizes, let's reset the animations so they look right
+    $(window).on('resize', () => {
+      console.log('window resized, reloading animations');
+
+      // Destroy all the animations
+      animations.forEach(anim => { anim.destroy(); });
+
+      // Re-construct the animations
+      initAnimations();
+    });
+  }
+});
+```
+
+# Bower Components
+
+To use bower components successfully, you need to include the path of the plugin in the config.rb so it will be loaded into the asset pipeline.
+
+For instance, the path to GreenSock's timeline max is
+
+```
+bower_components/gsap/src/uncompressed/TimelineMax.js
+```
+
+To include this file, the directive would look like this
+
+```
+sprockets.append_path 'assets/bower_components/gsap/src/uncompressed'
+```
+
+In the application.js.es6
+
+```
+// require TimelineMax
+```
 
 
 # Single page specific information
 
-The jquery library used is jQuery One Page Nav which can be found at https://github.com/davist11/jQuery-One-Page-Nav
+To register a new page, you must create the template at the path /sources/templates/{{filename}}.
 
-With scrolloffset now removed you must offset sections with css rules, here is an example:
+After creating the template, you must register the page proxy in the config.rb
 
-    - Say the navigation height is 50px, use css to target your sections or add a class to select.
+```
+# TODO: Add any additional HTML pages here
+page "/index.html", proxy: "/templates/index.html"
+```
 
-      .section-offset {
-        margin-top: -50px;
-        padding-top: 50px;
-      }
 
 # How to finalize a build
 
