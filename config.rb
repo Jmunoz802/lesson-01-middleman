@@ -12,12 +12,11 @@ require 'susy'
 
 compass_config do |config|
   # Require any additional compass plugins here.
-  config.add_import_path 'bower_components/foundation/scss'
   config.http_path = '/'
-  config.css_dir = 'stylesheets'
-  config.sass_dir = 'stylesheets'
-  config.images_dir = 'images'
-  config.javascripts_dir = 'javascripts'
+  config.css_dir = 'assets/stylesheets'
+  config.sass_dir = 'assets/stylesheets'
+  config.images_dir = 'assets/images'
+  config.javascripts_dir = 'assets/javascripts'
 
   # You can select your preferred output style here (can be overridden via the command line):
   # output_style = :expanded or :nested or :compact or :compressed
@@ -34,7 +33,6 @@ compass_config do |config|
   # preferred_syntax = :sass
   # and then run:
   # sass-convert -R --from scss --to sass sass scss && rm -rf sass && mv scss sass
-
 end
 
 ###
@@ -59,16 +57,20 @@ end
 # @which_fake_page = "Rendering a fake page with a variable"
 # end
 
-sprockets.append_path 'bower_components/foundation/js'
-sprockets.append_path 'bower_components/modernizr'
-sprockets.append_path 'bower_components/jquery/dist'
+# TODO: Add any additional HTML pages here
+page "/index.html", proxy: "/templates/index.html"
 
 
-set :css_dir, 'stylesheets'
-set :js_dir, 'javascripts'
-set :images_dir, 'images'
+sprockets.append_path 'assets/bower_components/jquery/dist'
+sprockets.append_path 'assets/bower_components/font-awesome/fonts'
+sprockets.append_path 'assets/bower_components/font-awesome/scss'
 
+set :css_dir, 'assets/stylesheets'
+set :js_dir, 'assets/javascripts'
+set :images_dir, 'assets/images'
+set :partials_dir, 'partials'
 
+activate :es6
 activate :livereload
 
 configure :build do
@@ -96,15 +98,15 @@ configure :build do
   #     ]
   # }
 
-    
+
   #activate :minify_html, :remove_input_attributes => false
-  
+
   #activate :minify_css
-  
+
   #activate :minify_javascript
-  
+
   activate :relative_assets
-  
+
   #activate :sitemap_generator
 
   #activate :autoprefixer
@@ -123,4 +125,3 @@ configure :build do
   # Or use a different image path
   # set :http_path, "/Content/images/"
 end
-

@@ -6,23 +6,23 @@
     = data.page.sitename
 
 
-  = partial 'components/meta'
-  = partial 'components/link'
+  = partial 'meta'
+  = partial 'link'
 
   - if data.page.url.present?
     %link{href: (data.page.url + current_page.url), rel: 'canonical'}
 
 
   = stylesheet_link_tag 'all'
-  = javascript_include_tag 'head'
+  = javascript_include_tag 'compatibility'
 
 
   %body{class: page_classes}
     .off-canvas-wrap{data: { offcanvas: ''}}
       .inner-wrap
         %main.main{role: 'main'}
-          = partial 'components/navigation'
+          = partial 'navigation'
           = yield
-          = partial 'components/footer'
+          = partial 'footer'
 
-    = javascript_include_tag 'body', defer: true
+    = javascript_include_tag 'application', defer: true, async: true
