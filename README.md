@@ -109,29 +109,17 @@ page "/index.html", proxy: "/templates/index.html"
 
 # How to finalize a build
 
-Use Ctrl+Shift+Slash to block comment/uncomment in config.rb.
-
-    - ex. ctrl + shift + /
-
-These are commented out as they break staging to Heroku.
-
-In the config.rb do the following:
-
-    - uncomment require 'extensions/sitemap.rb'
+`In the config.rb do the following:`
 
     - uncomment activate :favicon_maker
-
-    - uncomment activate :imageoptim
 
     - uncomment activate :minify_css
 
     - uncomment activate :minify_javascript
 
-    - uncomment activate :sitemap_generator
-
     - uncomment activate :gzip
 
-Confirm the following are correct on each pages frontmatter:
+`Confirm the following are correct on each pages data:`
 
     - title
 
@@ -143,10 +131,6 @@ Confirm the following are correct on each pages frontmatter:
 
     - url
 
-Check 'javascripts/_typekitfont.js' to confirm kit id is correct.
+`Verify favicon template is in place:`
 
-Check 'javascripts/_ga.js' to confirm UA-XXXXX-X code is correct.
-
-For favicon maker to work include favicon_template.png in source directory. Ideal image size is 152x152.
-
-Make sure to change the URL in 'extensions/sitemap.rb' to the proper live domain.
+    - Favicon Maker will generate the favicons correctly, you need `favicon_template.png` in the source directory for this to work. Link declarations are defined in `source/partials/_link.haml`
