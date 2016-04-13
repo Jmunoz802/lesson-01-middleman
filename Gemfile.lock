@@ -190,6 +190,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  builder
   compass
   middleman (= 3.4.0)
   middleman-autoprefixer
