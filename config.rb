@@ -58,6 +58,7 @@ end
 # end
 
 # TODO: Add any additional HTML pages here
+page "/sitemap.xml", layout: false
 page "/index.html", proxy: "/templates/index.html"
 
 
