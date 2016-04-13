@@ -14,6 +14,10 @@ Getting this project started is easy. Simply
 
     - Visit web page at "http://localhost:4567/"
 
+# Sitemap
+
+The sitemap is automatically generated. Change the site URL in the file `data/sitemap.yml`
+
 # Using Javascript ES6
 
 To use ES6, you need to specify that the javascript file is an ES6 file by including .es6 as the extension

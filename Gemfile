@@ -15,6 +15,7 @@ gem 'modular-scale'
 gem 'sitemap_generator'
 gem 'puma'
 gem 'rake'
+gem 'builder'
 
 group :darwin do
   gem 'rb-fsevent', require: false
