@@ -185,22 +185,10 @@
       text-align: center;
     }
 
-    // div.copy:nth-child(2n+1){
-    //     @include span(6 first);
-    // }
-    // div.copy:nth-child(2n){
-    //   @include span(6 last);
-    // }
-
     .copy {
-    //   &:nth-child(2n){
-    //     // @include span(6 last);
-    //   }
       margin-left: 5.3rem;
-    //
-    //   &:nth-child(2n+1){
-    //     // @include span(6 first);
-    //   }
+      margin-right: 5.3rem;
+      position: relative;
 
       .number, h3, p {
         display: block;
@@ -233,17 +221,56 @@
       }
     }
 
+    .svg-container {
+      position: relative;
+    }
+
+    .section-two, .section-four{
+      clear: left;
+    }
+    .section-one, .section-three {
+      clear: right;
+
+      .copy {
+        float: left;
+      }
+      .svg-container {
+        margin: 1.5rem 0 0 9rem;
+
+        float: left;
+      }
+    }
+
     .section-two {
       .copy {
+          float: right;
+
         h3 {
             margin-bottom: 1.5rem;
         }
       }
+      .svg-container{
+        float: left;
+      }
     }
-    .svg-container {
-      @include span(4 last);
 
-      margin-top:1.5rem;
+    .section-four {
+      .copy {
+        float: right;
+      }
+      .svg-container {
+        float: right;
+
+        margin: 2.8rem 8.3rem 0 0;
+      }
+    }
+
+    .result-title{
+      clear: both;
+      margin: 0 auto 0 auto;
+
+      text-align: center;
+      color: $gray;
     }
   }
 
