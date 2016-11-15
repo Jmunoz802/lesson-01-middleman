@@ -206,6 +206,3 @@ DEPENDENCIES
   rb-inotify
   sitemap_generator
   susy
-
-BUNDLED WITH
-   1.11.2

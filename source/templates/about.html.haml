@@ -1,0 +1,126 @@
+---
+title: About Page
+description: A description of this page.
+keywords: Keywords.
+sitename: Site Name
+url: http://www.boilerplate.com
+---
+
+.about-page-container
+
+  %header
+    .header-info
+      %span
+        %a{href: "http://createthebridge.com", target: "_blank"}
+          = partial 'svgs/ctb'
+        %a{href: "http://createthebridge.com", target: "_blank"} Create the Bridge
+      %h3
+        %a{href: "tel:8662449221"} 866.244.9221
+
+    %h1
+      YOUR APP'S SURVIVAL RATE IS VERY, VERY FRAGILE!
+    %h4
+      Only
+      %span
+        26% apps
+      recieve more than
+      %span
+        1,000 downloads
+      and are used regularly.
+      %div
+        Many apps also go over budget and wither away during development.
+
+    %h5
+      SEE WHAT WE DO TO STRENGTHEN YOUR IDEA
+    %h5.footer
+      HOW FAR ARE YOU WITH YOUR APP IDEA?
+
+  .info-bar
+    %ul
+      %a
+        %li
+          %h4
+            I DON'T KNOW WHERE TO START
+          %h5
+            We'll recommend a path of action.
+      %a
+        %li
+          %h4
+            I THINK I'M READY TO BUILD
+          %h5
+            Let us see what you have so far.
+      %a
+        %li
+          %h4
+            I ACTUALLY HAVE AN APP
+          %h5
+            We'll try to reuse what you have.
+
+  %section.main-data
+    %h4
+      NO WORRIES!
+    %h3
+      Our team is here to distill your vision & help you create a meaningful product.
+    .section-one
+      .copy
+        .number
+          01
+        %h3
+          IT ALL STARTS AT KICK-OFF
+        %p
+          Before any work is done, we always start with an amazing kick-off meeting. This is where we'll get to engage and deep dive into your idea. Prepare yourself for some serious high energy collaborative explorations!
+          %br
+          %br
+          You'll also meet the team, get acquainted and prepare for the journey ahead. Our goal here is to intimately understand your vision and business goals. We understand that you're not just looking for a design and development team, you need a partner that can work with you full product lifecycle.
+      .svg-container
+        = partial 'svgs/kick-off'
+    .section-two
+      .copy
+        .number
+          02
+        %h3
+          ESTABLISHING LINES OF COMMUNICATION
+        %p
+          Within our kick-off meeting, we'll also establish how you'd like to communicate. This is critical. We want to ensure that we have an open line of communication so nothing falls in between teh cracks and your project stays on track.
+      .svg-container
+
+    .section-three
+      .copy
+        .number
+          03
+        %h3
+          VISUAL DESIGNS
+        %p
+          After we've heard in your own words what you'd like to accomplish we're ready to concept and review your message. We;ll look at your industry and research the market leaders, competitors, and identify what sets you apart and how we help you improve.
+          %br
+          %br
+          From there, we'll begin to prototype your experience and provide wireframes stripped of any color or style. By keeping our wire-frames focused, you'll never be distracted by great visuals blinding you from bad UX design or poor structure.
+
+      .svg-container
+        = partial 'svgs/review'
+
+    .section-four
+      .copy
+        .number
+          04
+        %h3
+          DEVELOPMENT
+        %p
+          After we've established a great user experience and produced exceptionally tailored wire-frames we're ready to produce high fidelity designs. Here we begin producing production level assets such as illustrations, animations, videos to choosing color scheme and establishing the overall ook and feel of the project. We'll collaborate frequently to find something we're not only proud of, but something you love.
+      .svg-container
+        = partial 'svgs/development'
+  %section#about-the-author
+    .author-information
+      %h4
+        Joshua Tyree
+      %h5
+        Chief Technology Officer
+      %button
+        Button
+      %label
+        Input
+      %input{type: "text", placeholder: "Test Input"}
+
+    .author-bio
+      %p
+        This is the about section

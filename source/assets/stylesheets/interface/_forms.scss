@@ -1,38 +1,47 @@
 // Forms
 %input {
-  margin: 0.425em 0;
-  padding: 0.45em;
   display: block;
-  color: $form-color;
-  background-color: $form-background-color;
-  border: 1px solid $form-border-color;
-  box-shadow: $form-box-shadow;
-  border-radius: $round-edges;
+  margin: $input-spacing;
+  padding: $input-padding;
+
+  color: $input-color;
+  font-family: $input-font-family;
+  font-weight: $input-font-weight;
+  letter-spacing: $input-font-spacing;
+  background-color: $input-background-color;
+  box-shadow: $input-box-shadow;
+  border: $input-border-width $input-border-style $input-border-color;
+  border-radius: $input-border-radius;
   outline: none;
 
   &:hover {
-    border: 1px solid $form-border-color-hover;
+    color: $input-hover-color;
+    background-color: $input-hover-background-color;
+    border: $input-hover-border-width $input-hover-border-style $input-hover-border-color;
+    box-shadow: $input-hover-box-shadow;
   }
 
   &:focus {
-    box-shadow: $form-box-shadow;
-    background-color: $form-background-color-focus;
+    color: $input-focused-color;
+    background-color: $input-focused-background-color;
+    border: $input-focused-border-width $input-focused-border-style $input-focused-border-color;
+    box-shadow: $input-focused-box-shadow;
   }
 
   &::-webkit-input-placeholder {
-    color: $placeholder-text-color;
+    color: $input-placeholder-color;
   }
 
   &:-moz-placeholder {
-    color: $placeholder-text-color;
+    color: $input-placeholder-color;
   }
 
   &::-moz-placeholder {
-    color: $placeholder-text-color;
+    color: $input-placeholder-color;
   }
 
   &:-ms-input-placeholder {
-    color: $placeholder-text-color;
+    color: $input-placeholder-color;
   }
 }
 
@@ -62,11 +71,15 @@ input[type="radio"] {
 
 label {
   display: block;
-  font-weight: $label-weight;
-  font-size: rem-calc(15);
-  color: $label-color;
 
-  abbr {
-    display: none;
+  color: $label-color;
+  font-family: $label-font-family;
+  font-weight: $label-font-weight;
+  font-size: $label-font-size;
+
+  @if $hide-required-symbols {
+    abbr {
+      display: none;
+    }
   }
 }

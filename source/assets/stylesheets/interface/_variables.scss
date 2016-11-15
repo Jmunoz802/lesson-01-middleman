@@ -1,16 +1,19 @@
 // Colors
 $off-white: #f1f1f1;
-$gray: #ccc;
-$light-blue: #3598dc;
+$gray: #666666;
+$gray-blue: #536069;
+$light-blue: #dee4e9;
 $light-green: #2ab292;
 $light-gray: #999;
 $medium-gray: #666;
 $dark-gray: #333;
-$dark-blue: #22313F;
+$dark-blue: #175681;
 $green: #3FC380;
 $red: #D24D57;
 $yellow: #f1c205;
 $orange: #f08a24;
+$blue: #2386c9;
+$black-blue: #131d24;
 
 // Backgrounds
 $body-background-color: white;
@@ -41,30 +44,80 @@ $ms-small-up:   ms(1, $ms-base, $ms-small-ratio);
 $ms-0: $ms-base;
 $ms-small-down:  ms(-1);
 
-$font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$font-family: "brandon-grotesque", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 $font-weight: normal;
 $font-color: $medium-gray;
-$header-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-$header-font-weight: normal;
+$header-font-family: "brandon-grotesque", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$header-font-weight: bold;
 $header-font-color: $dark-gray;
 
 
-// Buttons
+// Button (Normal)
 $button-font-size: rem-calc(14);
 $button-font-weight: $font-weight;
-$button-background-color: $light-green;
-$button-background-color-hover: scale_color($button-background-color, $lightness: -20%);
-$button-border: none;
-$button-border-color: none;
-$button-border-color-hover: none;
-$button-color: white;
-$button-color-hover: white;
+$button-color: $gray-blue;
+$button-background-color: transparent;
+$button-border-width: rem-calc(2);
+$button-border-style: solid;
+$button-border-color: $blue;
+$button-border-radius: rem-calc(20);
+$button-spacing: 0.5em 2em;
+
+// Button (Hover)
+$button-hover-color: white;
+$button-hover-border-width: rem-calc(2);
+$button-hover-border-style: solid;
+$button-hover-border-color: $blue;
+$button-hover-border-radius: rem-calc(20);
+$button-hover-background-color: $blue;
+
 
 
 // Links
 $link-color: $light-blue;
 $link-color-hover: scale_color($link-color, $lightness: -20%);
 $link-color-active: $dark-blue;
+
+
+// Labels
+$hide-required-symbols: true;
+$label-font-family: $font-family;
+$label-font-weight: $font-weight;
+$label-font-size: rem-calc(16);
+$label-color: black;
+
+// Inputs (Normal)
+$input-font-family: $font-family;
+$input-font-weight: $font-weight;
+$input-font-spacing: 0.005em;
+$input-color: $blue;
+$input-spacing: 0.425em 0;
+$input-padding: 0.45em;
+$input-background-color: transparent;
+$input-border-width: rem-calc(1);
+$input-border-style: solid;
+$input-border-color: $dark-blue;
+$input-border-radius: rem-calc(2);
+$input-box-shadow: none;
+
+// Inputs (Hover)
+$input-hover-color: $dark-blue;
+$input-hover-background-color: white;
+$input-hover-border-width: rem-calc(1);
+$input-hover-border-style: solid;
+$input-hover-border-color: $dark-blue;
+$input-hover-box-shadow: none;
+
+// Inputs (Placeholder)
+$input-placeholder-color: #999;
+
+// Inputs (Focused)
+$input-focused-color: $dark-blue;
+$input-focused-border-width: $input-hover-border-width;
+$input-focused-border-style: $input-hover-border-style;
+$input-focused-border-color: $blue;
+$input-focused-background-color: $input-hover-background-color;
+$input-focused-box-shadow: $input-hover-box-shadow;
 
 
 // Forms
