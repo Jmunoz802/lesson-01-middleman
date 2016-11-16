@@ -17,3 +17,11 @@
     color: $icon-color-hover;
   }
 }
+
+@mixin reset-anchor-styles {
+ font-style: normal;
+ // font-size: $base-font-size;
+ font-size: 100%;
+ line-height: 1.5rem;
+ letter-spacing: 0;
+}

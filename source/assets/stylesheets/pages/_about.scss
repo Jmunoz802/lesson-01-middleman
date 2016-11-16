@@ -18,10 +18,11 @@
 }
 
   /////////////
-  //Header
+  //  Header
   /////////////
   header {
     @include span(100%);
+
     background: $black-blue url(http://www.walldevil.com/wallpapers/w06/cats-mountains-snow-nature-lions-tigers-big-cats.jpg) no-repeat;
     background-position: center center;
     background-size: cover;
@@ -37,8 +38,8 @@
       @include span(100%);
 
       position: absolute;
-
-      padding: 2rem 0 0 3rem;
+      box-sizing: border-box;
+      padding: 2.25rem 0 0 3rem;
 
       letter-spacing: rem-calc(0.145px);
 
@@ -49,27 +50,25 @@
       svg:hover {
         .st0{fill:$light-blue;}
       }
-      span {
-        @include span(30%);
-
-        margin: 0;
-
-        font-size: 16px;
-
-      }
-
-      h3 {
-        @include span(30% last);
-
-        padding: 0.75rem 6rem 0 0;
-
-        text-align: right;
-        font-weight: normal;
-        line-height: 1.6rem;
-      }
 
       a {
+        @include reset-anchor-styles;
+
+        font-size: calc-rem(16px);
         vertical-align: middle;
+
+        text-align: right;
+
+        h3 {
+          @include span(30% last);
+          // text-align: right;
+          right:0;
+          padding: 0.75rem 3rem 0 0;
+
+          letter-spacing: 0.145rem;
+          font-weight: normal;
+          line-height: 1.6rem;
+        }
       }
     }
 
@@ -186,14 +185,15 @@
     }
 
     .copy {
-      margin-left: 5.3rem;
-      margin-right: 5.3rem;
+      // margin-left: 5.3rem;
+      // margin-right: 5.3rem;
       position: relative;
+      // max-width: 36.5rem;
 
       .number, h3, p {
         display: block;
 
-        margin: 0;
+        margin: 0 auto;
         max-width: 36.5rem;
 
         text-align: left;
@@ -226,16 +226,33 @@
     }
 
     .section-two, .section-four{
+      @include span(100%);
       clear: left;
-    }
-    .section-one, .section-three {
-      clear: right;
 
       .copy {
+        @include span(50% last);
+        float: right;
+      }
+      .svg-container{
+        @include span(50% first);
+        margin-right: 0;
+        text-align: center;
+        // align-content: center;
+      }
+    }
+    .section-one, .section-three {
+      @include span(100%);
+
+      clear: right;
+      .copy {
+        @include span(50% first);
+        margin-right: 0;
         float: left;
       }
       .svg-container {
-        margin: 1.5rem 0 0 9rem;
+        @include span(50% last);
+        text-align: center;
+        // margin: 1.5rem 0 0 9rem;
 
         float: left;
       }
@@ -243,25 +260,9 @@
 
     .section-two {
       .copy {
-          float: right;
-
         h3 {
             margin-bottom: 1.5rem;
         }
-      }
-      .svg-container{
-        float: left;
-      }
-    }
-
-    .section-four {
-      .copy {
-        float: right;
-      }
-      .svg-container {
-        float: right;
-
-        margin: 2.8rem 8.3rem 0 0;
       }
     }
 
@@ -269,8 +270,99 @@
       clear: both;
       margin: 0 auto 0 auto;
 
+      h4{
+        margin-bottom: 1.5rem;
+        text-align: center;
+        color: $gray;
+      }
+    }
+
+    .result-video{
+      @include span(100%);
+      height: 40.5rem;
+
+      background: $dark-gray;
+    }
+  }
+
+  ////////////////
+  //  about-footer
+  ////////////////
+  .about-footer {
+    @include span(100%);
+
+    h3, h5, h6, p {
       text-align: center;
-      color: $gray;
+    }
+
+    h3 {
+      color: $gray-blue;
+      max-width: 35%;
+      margin: 0 auto;
+    }
+
+    h5 {
+      color: $blue;
+      letter-spacing: rem-calc(0.165em);
+      line-height: 3rem;
+    }
+
+    a {
+      h3 {
+        margin-bottom: 1.5rem;
+        color: $gray-blue;
+        font-weight: normal;
+        letter-spacing: rem-calc(0.145em);
+      }
+    }
+
+    p {
+      color: $gray-blue;
+    }
+
+    button {
+      height: 3rem;
+      display: block;
+      margin: 0 auto 3rem auto;
+      border-radius: 2.25rem;
+    }
+
+    h6 {
+      letter-spacing: 0.145em;
+      font-size: rem-calc(14px);
+      color: $blue;
+      line-height: 1.75em;
+    }
+    .company-bar{
+      @include span(100%);
+
+      background: $light-blue;
+      height: 7.5rem;
+      margin-bottom: 4.5rem;
+      vertical-align: middle;
+      text-align: center;
+
+      ul {
+        // @include span(100%);
+
+        // vertical-align: middle;
+        // height: 7.5rem;
+        padding: 2.25rem 0;
+
+        // vertical-align: center;
+
+        li {
+          margin: 0 1.5rem;
+          // vertical-align: middle;
+
+          display: inline;
+          svg{
+            vertical-align: middle;
+            // margin: auto 0;
+            // margin-top: 2.25rem;
+          }
+        }
+      }
     }
   }
 
