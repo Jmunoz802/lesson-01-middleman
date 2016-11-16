@@ -13,7 +13,7 @@ url: http://www.boilerplate.com
       %a{href: "http://createthebridge.com", target: "_blank"}
         = partial 'svgs/ctb'
       %a{href: "http://createthebridge.com", target: "_blank"}
-        Create the Bridge
+        CREATE THE BRIDGE
       %a{href: "tel:8662449221"}
         %h3
           866.244.9221
@@ -114,21 +114,23 @@ url: http://www.boilerplate.com
       %h4
         THE RESULTS
     .result-video
-  -# %section#about-the-author
-    .author-information
-      %h4
-        Joshua Tyree
-      %h5
-        Chief Technology Officer
-      %button
-        Button
-      %label
-        Input
-      %input{type: "text", placeholder: "Test Input"}
-
-    .author-bio
-      %p
-        This is the about section
+      .play-button
+        //= partial 'svgs/play'
+    -# # %section#about-the-author
+    -# .author-information
+    -#   %h4
+    -#     Joshua Tyree
+    -#   %h5
+    -#     Chief Technology Officer
+    -#   %button
+    -#     Button
+    -#   %label
+    -#     Input
+    -#   %input{type: "text", placeholder: "Test Input"}
+    -#
+    -# .author-bio
+    -#   %p
+    -#     This is the about section
   .about-footer
     .company-bar
       %ul
@@ -157,9 +159,17 @@ url: http://www.boilerplate.com
         866.244.9221
     .team
       %div
-        %img{:src => '../assets/images/jay.png'}
+        = image_tag 'jay.png'
+
+        -# %img{:src => '../assets/images/jay.png'}
         %img{:src => '../assets/images/josh.png'}
         %img{:src => '../assets/images/libni.png'}
         %img{:src => '../assets/images/luis.png'}
         %img{:src => '../assets/images/ryan.png'}
         %img{:src => '../assets/images/tyree.png'}
+
+  .video-modal
+    #modal-video
+      %iframe{:allowfullscreen => "", :frameborder => "0", :height => "100%", :mozallowfullscreen => "", :src => "https://player.vimeo.com/video/190639316", :webkitallowfullscreen => "", :width => "100%"}
+    %a.close{:href => "#"}
+      = partial 'svgs/form-exit-icon'

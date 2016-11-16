@@ -135,3 +135,20 @@ i {
   width: rem-calc(133);
   height: rem-calc(20);
 }
+
+.form-exit-icon {
+  width: rem-calc(72px);
+  height: rem-calc(72px);
+
+  .cls-1 {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2px;
+    opacity: 0.7;
+  }
+
+  .cls-2 {
+    fill: #bebebe;
+    fill-rule: evenodd;
+  }
+}

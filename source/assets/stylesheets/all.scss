@@ -3,7 +3,11 @@
 @import 'interface/base';
 @import 'pages/base';
 
-
+body {
+  &.hidden-scrollbar {
+    overflow: hidden;
+  }
+}
 
 html, body,{
   //@include debug-vertical-alignment();
