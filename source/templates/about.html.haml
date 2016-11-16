@@ -133,6 +133,8 @@ url: http://www.boilerplate.com
     -#     This is the about section
   .about-footer
     .company-bar
+      .left-arrow
+      .right-arrow
       %ul
         %li
           Forelinx
@@ -160,13 +162,11 @@ url: http://www.boilerplate.com
     .team
       %div
         = image_tag 'jay.png'
-
-        -# %img{:src => '../assets/images/jay.png'}
-        %img{:src => '../assets/images/josh.png'}
-        %img{:src => '../assets/images/libni.png'}
-        %img{:src => '../assets/images/luis.png'}
-        %img{:src => '../assets/images/ryan.png'}
-        %img{:src => '../assets/images/tyree.png'}
+        = image_tag 'josh.png'
+        = image_tag 'libni.png'
+        = image_tag 'luis.png'
+        = image_tag 'ryan.png'
+        = image_tag 'tyree.png'
 
   .video-modal
     #modal-video
