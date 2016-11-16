@@ -26,9 +26,8 @@
     background: $black-blue url(http://www.walldevil.com/wallpapers/w06/cats-mountains-snow-nature-lions-tigers-big-cats.jpg) no-repeat;
     background-position: center center;
     background-size: cover;
-    // background-position: center;
+
     height: 54.05rem;
-    // opacity: 0.5;
 
     h1, h3, h4, h5, span {
       color: white;
@@ -43,19 +42,13 @@
 
       letter-spacing: rem-calc(0.145px);
 
-      @media only screen and (max-width: 640px){
-        padding: 1.5rem 0 0 1.5rem;
-      }
-
       svg#ctb {
         margin-right: 2rem;
         vertical-align: middle;
 
-        @media only screen and (max-width: 640px){
-          padding-top: 1.5rem;
-        }
       }
-      #ctb:hover{
+
+      #ctb:hover {
         .st0{
           fill: $light-blue;
         }
@@ -79,19 +72,10 @@
           right:0;
           top: 3rem;
           padding-right: 3rem;
-          // padding: 0.75rem 3rem 0 0;
 
-          // letter-spacing: 0.145em;
           font-weight: normal;
           line-height: 1.6rem;
 
-          @media only screen and (max-width: 640px){
-            padding: 1.5rem 3rem 0 0;
-            text-align: left;
-            // width: 100%;
-            left: 7.5rem;
-            right: none;
-          }
         }
 
         :hover {
@@ -183,8 +167,7 @@
           font-weight: normal;
         }
 
-        @media only screen and (max-width: 920px){
-          width: 100%;
+        // @media only screen and (max-width: 920px){
           // h4{
           //   font-weight: normal;
           //   font-size: rem-calc(20px);
@@ -192,7 +175,7 @@
           // h5{
           //   font-size: 0px;
           // }
-        }
+        // }
 
       }
 
@@ -225,12 +208,9 @@
     }
 
     .copy {
-      // margin-left: 5.3rem;
-      // margin-right: 5.3rem;
       box-sizing: border-box;
       position: relative;
       padding: 0 1.5rem;
-      // max-width: 36.5rem;
 
       .number, h3, p {
         display: block;
@@ -266,12 +246,21 @@
 
     .svg-container {
       position: relative;
+    }
 
-      @media only screen and (max-width: 1023px){
-        position:absolute;
-        opacity: 0.4;
-        z-index: -1;
-        right: 3rem;
+    .section-one, .section-three {
+      @include span(100%);
+
+      clear: right;
+
+      .copy {
+        @include span(50% first);
+        margin-right: 0;
+        float: left;
+      }
+      .svg-container {
+        @include span(50% last);
+        text-align: center;
       }
     }
 
@@ -283,44 +272,11 @@
       .copy {
         @include span(50% last);
         float: right;
-
-        @media only screen and (max-width: 1023px){
-          width: 80%;
-          float:left;
-        }
       }
       .svg-container{
         @include span(50% first);
         margin-right: 0;
         text-align: center;
-
-        @media only screen and (max-width: 1023px){
-          width:auto;
-          right: 1.5rem;
-        }
-      }
-    }
-    .section-one, .section-three {
-      @include span(100%);
-
-      clear: right;
-
-      .copy {
-        @include span(50% first);
-        margin-right: 0;
-        float: left;
-
-        @media only screen and (max-width: 1023px){
-          width: 80%;
-        }
-      }
-      .svg-container {
-        @include span(50% last);
-        text-align: center;
-
-        @media only screen and (max-width: 1023px){
-          width: auto;
-        }
       }
     }
 
@@ -429,35 +385,35 @@
 
       background: $light-blue;
 
-      .left-arrow, .right-arrow{
-        margin-top: 2.7rem;
-        position: absolute;
-        height: 0;
-        width: 0;
-        border-top: 20px solid transparent;
-        border-bottom: 20px solid transparent;
-        opacity: 0;
-        @media only screen and (max-width: 900px){
-          opacity: 0.5;
-        }
-
-      }
-
-      .left-arrow{
-        left: 1.5rem;
-        border-right: 40px solid $dark-gray;
-        &:hover{
-          border-right-color: $black-blue;
-        }
-      }
-
-      .right-arrow{
-        right: 1.5rem;
-        border-left: 40px solid $dark-gray;
-        &:hover{
-          border-left-color: $black-blue;
-        }
-      }
+      // .left-arrow, .right-arrow{
+      //   margin-top: 2.7rem;
+      //   position: absolute;
+      //   height: 0;
+      //   width: 0;
+      //   border-top: 20px solid transparent;
+      //   border-bottom: 20px solid transparent;
+      //   opacity: 0;
+      //   @media only screen and (max-width: 900px){
+      //     opacity: 0.5;
+      //   }
+      //
+      // }
+      //
+      // .left-arrow{
+      //   left: 1.5rem;
+      //   border-right: 40px solid $dark-gray;
+      //   &:hover{
+      //     border-right-color: $black-blue;
+      //   }
+      // }
+      //
+      // .right-arrow{
+      //   right: 1.5rem;
+      //   border-left: 40px solid $dark-gray;
+      //   &:hover{
+      //     border-left-color: $black-blue;
+      //   }
+      // }
 
       ul {
         margin: 2.25rem 4.5rem;
@@ -471,13 +427,9 @@
             vertical-align: middle;
           }
         }
-        @media only screen and (max-width: 900px){
-          position: absolute;
-          overflow-x: hidden;
-          white-space: nowrap;
-          right: 0;
-          left: 0;
-        }
+
+        //right here
+
       }
     }
 
@@ -564,6 +516,81 @@
     }
 
     @media only screen and (max-width: 640px) {
+
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .main-data {
+
+      .svg-container {
+        position:absolute;
+        opacity: 0.4;
+        z-index: -1;
+        right: 3rem;
+      }
+
+      .section-one, .section-three {
+        .copy {
+          width: 80%;
+        }
+        .svg-container {
+          width: auto;
+        }
+      }
+
+      .section-two, .section-four {
+        .copy {
+          width: 80%;
+          float:left;
+        }
+        .svg-container {
+          width:auto;
+          right: 1.5rem;
+        }
+      }
+    }
+
+    .info-bar {
+      ul {
+        a {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 640px){
+    header{
+      .header-info{
+
+        padding: 1.5rem 0 0 1.5rem;
+
+        svg#ctb {
+            padding-top: 1.5rem;
+        }
+
+        a{
+          h3{
+            padding: 1.5rem 3rem 0 0;
+            text-align: left;
+            left: 7.5rem;
+            right: none;
+          }
+        }
+      }
+    }
+
+    .about-footer{
+      .company-bar{
+        ul{
+          margin-left: 0.5rem;
+          margin-right: 0.5rem;
+
+        }
+      }
+    }
+    .video-modal{
       .close {
         margin: 1.5em;
 

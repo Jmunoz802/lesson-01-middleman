@@ -1,7 +1,6 @@
 
 // # Plays video if the player is loaded, otherwise just waits until it's done loading.
 $(document).ready(function() {
-  //TODO switch .top-bar etc with classes from about.haml
   $('.play-button').on('click', function(e) {
     e.preventDefault();
 
