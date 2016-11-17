@@ -273,7 +273,7 @@
         @include span(50% last);
         float: right;
       }
-      .svg-container{
+      .svg-container {
         @include span(50% first);
         margin-right: 0;
         text-align: center;
@@ -288,25 +288,25 @@
       }
     }
 
-    .result-title{
+    .result-title {
       clear: both;
       margin: 0 auto 0 auto;
 
-      h4{
+      h4 {
         margin-bottom: 1.5rem;
         text-align: center;
         color: $gray;
       }
     }
 
-    .result-video{
+    .result-video {
       @include span(100%);
       height: 40.5rem;
 
       overflow: hidden;
       cursor: pointer;
       background: $dark-gray;
-      .play-button{
+      .play-button {
         height: 100%;
         width: 100%;
         margin: 0 auto;
@@ -358,6 +358,7 @@
 
     p {
       color: $gray-blue;
+      padding: 0 1.5rem;
     }
 
     button {
@@ -385,36 +386,6 @@
 
       background: $light-blue;
 
-      // .left-arrow, .right-arrow{
-      //   margin-top: 2.7rem;
-      //   position: absolute;
-      //   height: 0;
-      //   width: 0;
-      //   border-top: 20px solid transparent;
-      //   border-bottom: 20px solid transparent;
-      //   opacity: 0;
-      //   @media only screen and (max-width: 900px){
-      //     opacity: 0.5;
-      //   }
-      //
-      // }
-      //
-      // .left-arrow{
-      //   left: 1.5rem;
-      //   border-right: 40px solid $dark-gray;
-      //   &:hover{
-      //     border-right-color: $black-blue;
-      //   }
-      // }
-      //
-      // .right-arrow{
-      //   right: 1.5rem;
-      //   border-left: 40px solid $dark-gray;
-      //   &:hover{
-      //     border-left-color: $black-blue;
-      //   }
-      // }
-
       ul {
         margin: 2.25rem 4.5rem;
 
@@ -427,9 +398,6 @@
             vertical-align: middle;
           }
         }
-
-        //right here
-
       }
     }
 
@@ -445,11 +413,11 @@
         text-align: center;
 
         img {
-          margin-left: 1.5rem;
+          margin: 0 0.75rem;
         }
-        img:first-child{
-          margin-left: 0;
-        }
+        // img:first-child{
+        //   margin-left: 0;
+        // }
       }
     }
   }
@@ -560,9 +528,9 @@
     }
   }
 
-  @media only screen and (max-width: 640px){
-    header{
-      .header-info{
+  @media only screen and (max-width: 640px) {
+    header {
+      .header-info {
 
         padding: 1.5rem 0 0 1.5rem;
 
@@ -581,16 +549,16 @@
       }
     }
 
-    .about-footer{
-      .company-bar{
-        ul{
+    .about-footer {
+      .company-bar {
+        ul {
           margin-left: 0.5rem;
           margin-right: 0.5rem;
 
         }
       }
     }
-    .video-modal{
+    .video-modal {
       .close {
         margin: 1.5em;
 
